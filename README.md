@@ -1,50 +1,48 @@
+# Rice Image Classification Project
 
-# Proyek Klasifikasi Gambar Beras
+This is a **Rice Image Classification Project** that utilizes a rice image dataset categorized by class. Various machine learning and image processing techniques are applied to classify images into predefined categories.
 
-Proyek ini adalah **Proyek Klasifikasi Gambar Beras** yang menggunakan dataset gambar beras berdasarkan kelasnya. Dalam proyek ini, berbagai teknik pembelajaran mesin dan pemrosesan gambar diterapkan untuk mengklasifikasikan gambar sesuai dengan kategori yang telah ditentukan. 
+### **Project Description**
+1. **Objective**: Develop an image classification model capable of identifying and categorizing rice images based on their visual features.
+2. **Dataset**: The dataset used consists of rice grain images from Kaggle, featuring a variety of shapes and colors.
+3. **Data Processing Techniques**:
+   - Utilizes Python libraries such as NumPy, Pandas, and Sklearn for data manipulation.
+   - Image processing with Skimage and OpenCV.
+   - Image augmentation to enhance model performance.
+4. **Models Used**:
+   - Models built with **TensorFlow and Keras**, including popular architectures like MobileNet and DenseNet121.
+   - Application of **Convolutional Neural Networks (CNN)** for visual feature extraction.
+5. **Model Evaluation**:
+   - Dataset is split into **training and testing sets** to evaluate performance.
+   - Uses **evaluation metrics** such as confusion matrix and classification report to analyze results.
 
-### **Deskripsi Proyek**
-1. **Tujuan**: Mengembangkan model klasifikasi gambar yang dapat mengidentifikasi dan mengelompokkan gambar beras berdasarkan fitur visualnya.
-2. **Dataset**: Dataset yang digunakan adalah kumpulan gambar beras dari Kaggle yang memiliki variasi bentuk dan warna.
-3. **Teknik Pemrosesan Data**:
-   - Penggunaan berbagai pustaka Python seperti NumPy, Pandas, dan Sklearn untuk manipulasi data.
-   - Pemrosesan citra dengan Skimage dan OpenCV.
-   - Augmentasi gambar untuk meningkatkan performa model.
-4. **Model yang Digunakan**:
-   - Model berbasis **TensorFlow dan Keras**, termasuk arsitektur populer seperti MobileNet dan DenseNet121.
-   - Penerapan teknik **Convolutional Neural Networks (CNN)** untuk ekstraksi fitur visual.
-5. **Evaluasi Model**:
-   - Pembagian dataset menjadi data **latih dan uji** untuk evaluasi performa.
-   - Penggunaan **metrik evaluasi** seperti confusion matrix dan classification report untuk menganalisis hasil.
+## How to Use
 
-## Cara Pakai
+Here are the steps to run the **Rice Image Classification** project on Google Colab:
 
-Berikut adalah langkah-langkah untuk menggunakan proyek **Klasifikasi Gambar Beras** di Google Colab:
+### **1. Initial Setup**
+- Ensure you have a Google account and are signed into Google Colab.
+- **Open the Colab project** via the following link: [Rice Image Classification Project](https://colab.research.google.com/drive/1plhq93FQ4SSqxcq7LEjibzZo916LV6o1#scrollTo=U4cU5-P9wzbF).
+- Make sure GPU is enabled by going to **Runtime** → **Change runtime type** → **Hardware accelerator** → select **T4 GPU**.
 
-### **1. Persiapan Awal**
-- Pastikan Anda memiliki akun Google dan sudah masuk ke Google Colab.
-- **Buka proyek Colab** melalui link berikut: [Proyek Klasifikasi Gambar](https://colab.research.google.com/drive/1plhq93FQ4SSqxcq7LEjibzZo916LV6o1#scrollTo=U4cU5-P9wzbF).
-- Pastikan koneksi ke GPU aktif dengan pergi ke **Runtime** → **Change runtime type** → **Hardware accelerator** → pilih **T4 GPU**.
+### **2. Install and Import Libraries**
+- Run the cell **"Import All Required Libraries"** to import all dependencies like NumPy, Pandas, TensorFlow, and Skimage.
+- Ensure all required packages are installed.
 
-### **2. Install dan Import Library**
-- Jalankan sel **"Import Semua Packages/Library yang Digunakan"** untuk mengimpor semua pustaka seperti NumPy, Pandas, TensorFlow, dan Skimage.
-- Pastikan semua dependensi telah terinstal dengan baik.
+### **3. Data Preparation**
+- **Upload the dataset** if not already available using the cell with `files.upload()`.
+- The dataset will be processed and split into **training and test sets** using `train_test_split`.
 
-### **3. Persiapan Data**
-- **Upload dataset** jika belum tersedia dengan menjalankan sel yang berisi `files.upload()`.
-- Dataset akan diproses dan dibagi menjadi **data latih dan uji** menggunakan `train_test_split`.
+### **4. Model Building and Training**
+- A **CNN-based model** will be built using architectures like **MobileNet** or **DenseNet121**.
+- Use `ImageDataGenerator` for data augmentation.
+- Start training the model using `model.fit()` with the preprocessed dataset.
 
-### **4. Pembuatan dan Pelatihan Model**
-- Model berbasis **CNN (Convolutional Neural Networks)** akan dibuat menggunakan arsitektur seperti **MobileNet** atau **DenseNet121**.
-- Jalankan sel yang berisi **ImageDataGenerator** untuk augmentasi data.
-- Mulai pelatihan model dengan `model.fit()` menggunakan dataset yang sudah diolah.
+### **5. Model Evaluation**
+- Use **confusion matrix** and **classification report** to assess model performance.
+- Run the evaluation cell using `model.evaluate()` to check accuracy.
 
-### **5. Evaluasi Model**
-- Gunakan **confusion matrix** dan **classification report** untuk menilai performa model.
-- Jalankan sel evaluasi yang berisi `model.evaluate()` untuk melihat akurasi.
-
-### **6. Prediksi Gambar**
-- Upload gambar baru untuk diuji.
-- Gunakan `model.predict()` untuk mendapatkan hasil klasifikasi.
-- Visualisasikan hasil dengan `plt.imshow()` dan label prediksi.
-    
+### **6. Image Prediction**
+- Upload a new image to test.
+- Use `model.predict()` to get the classification result.
+- Visualize the output using `plt.imshow()` and predicted label.
